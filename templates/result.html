@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Results | Resume Screener</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #fddde6, #fcb2c0);
+        text-align: center;
+        padding: 50px;
+        color: #333;
+      }
+
+      h2 {
+        font-size: 2em;
+        color: #d7266a;
+      }
+
+      .score {
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: #444;
+      }
+
+      .suggestions {
+        margin-top: 30px;
+      }
+
+      .suggestions ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .suggestions li {
+        background: #fff;
+        padding: 10px;
+        margin: 8px auto;
+        max-width: 300px;
+        border-radius: 6px;
+        border: 1px solid #e89cae;
+        color: #d7266a;
+        font-weight: bold;
+      }
+      .suggestions {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .back-btn {
+        margin-top: 30px;
+        background-color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-size: 1em;
+        color: #d7266a;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background-color: #f7c3c7;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Screening Results</h2>
+
+    <!--Here we are printing the code in page-->
+    {% if score is not none %}
+    <div class="score">Match Score: {{ score }} %</div>
+    {% endif %} {% if filter_suggestions %}
+    <div class="suggestions">
+      <h3>Consider Adding:</h3>
+      <ul>
+        {% for word in filter_suggestions %}
+        <li>{{ word }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <form action="/screen" method="get">
+      <button type="submit" class="back-btn">Go Back</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <title>Resume Screener</title>
+  </head>
+  <body>
+    <form
+      method="POST"
+      action="/result"
+      enctype="multipart/form-data"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <label for="file" class="file-label">Upload Resume (PDF)</label><br />
+      <input type="file" id="file" name="file" accept=".pdf" /><br /><br />
+      <label for="des">Job Description</label><br />
+      <textarea id="des" name="des" rows="5" cols="30" required></textarea
+      ><br /><br />
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </body>
+</html>

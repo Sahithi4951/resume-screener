@@ -1,0 +1,65 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+input[type="file"] {
+  background-color: #fff;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+  padding: 6px;
+  color: #333;
+  cursor: pointer;
+}
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+.submit {
+  background-color: pink;
+  border:  1px solid rgb(177, 65, 102);
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border-radius: 6px;
+  align-self: center;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+input[type="file"] {
+  background-color: pink;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+}
+.submit:hover {
+  background-color: pink;
+  color: white;
+  cursor: pointer;
+}
+#file,
+#des {
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 1px solid rgb(177, 65, 102);
+  border-radius: 6px;
+  font-size: 14px;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+form {
+  width :  320px;
+  padding: 20px;
+  border: 2px solid rgb(227, 141, 156);
+  margin: 50px auto;
+  background-color:linear-gradient(to right, palevioletred,#d7266a);
+  font-family: Arial, sans-serif;
+  align-self: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
